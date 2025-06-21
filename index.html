@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="src/output.css" />
-    <script
-      src="https://kit.fontawesome.com/78fa2e6600.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="index.js"></script>
-  </head>
-  <!--
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="src/output.css" />
+  <script src="https://kit.fontawesome.com/78fa2e6600.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</head>
+<!--
   TAILWIND CSS
   npm install tailwindcss @tailwindcss/cli
   src/input.css
   @import "tailwindcss";
   npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
   -->
-  <!--
+<!--
   GITHUB
   git init
   git add . 
@@ -26,7 +24,9 @@
   git remote add origin URL
   git push -u origin master 
   -->
-  <body class="h-screen bg-[url('/img/image.png')] bg-center bg-cover bg-no-repeat">
+
+<body class="bg-[url('img/image.png')] bg-center bg-cover bg-fixed bg-no-repeat">
+  <nav class="sticky top-0 z-[100]">
     <div>
       <div class="h-[10rem] flex justify-between items-center px-[3rem]">
         <div class="flex space-x-5">
@@ -54,9 +54,63 @@
           </div>
         </div>
         <div class="flex md:hidden text-[1.5rem]">
-          <i class="fas fa-bars"></i>
+          <div id="hamburger" class="flex md:hidden text-[1.5rem]">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div id="xmark" class="hidden md:hidden text-[1.5rem]">
+            <i class="fas fa-x"></i>
+          </div>
         </div>
       </div>
-    </nav>
-  </body>
+    </div>
+    <div id="mobile-menu" class="w-2/3 hidden h-screen bg-[#94A8B8] pt-[2.75rem] px-[3rem] absolute top-0">
+      <div>
+        <div class="text-[3rem]">
+          <h1>LUNOR</h1>
+        </div>
+        <div>
+          <a href="">Home</a>
+        </div>
+        <div>
+          <a href="">About Me</a>
+        </div>
+        <div>
+          <a href="">Portfolio</a>
+        </div>
+        <div>
+          <a href="">What I Do</a>
+        </div>
+        <div>
+          <a href="">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="grid justify-center xl:flex xl:justify-between">
+    <header class="xl:w-1/2 hover:scale-102 transition-transform duration-1000">
+      <div class="bg-[#C1C0A8] rounded-2xl w-[full] h-[auto] mx-[1rem] md:mx-[3rem] xl:mr-[1rem]">
+        <div class="bg-[#a6a575] rounded-t-2xl h-auto flex justify-center items-center">
+          <h1 class="text-[2rem] md:text-[5rem] text-center font-bold px-[1rem] py-[1rem]">
+            Welcome To My Website
+          </h1>
+        </div>
+        <div class="text-[2rem] md:text-[4rem] px-[2rem] py-[2rem]">
+          <p>Hi Everyone I Created This Website To Collect My Work.</p>
+          <p class="underline">I Hope You Like It</p>
+        </div>
+      </div>
+    </header>
+    <main class="xl:w-1/2 hover:scale-102 transition-transform duration-1000">
+      <div class="bg-white text-center mx-[1rem] md:mx-[3rem] xl:ml-[1rem] mt-[3rem] xl:mt-[0rem]">
+        <div class="px-[2rem] pt-[2rem]">
+          <img class="h-full w-full object-center object-cover" src="/src/img/image-1.png" alt="">
+        </div>
+        <div class="text-[3rem] xl:text-[4rem] font-bold">
+          <h1>LUNOR</h1>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
 </html>
