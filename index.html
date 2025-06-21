@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <script
+      src="https://kit.fontawesome.com/78fa2e6600.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </head>
+  <!--
+  TAILWIND CSS
+  npm install tailwindcss @tailwindcss/cli
+  src/input.css
+  @import "tailwindcss";
+  npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+  -->
+  <!--
+  GITHUB
+  git init
+  git add . 
+  git commit -m "first commit"
+  git remote add origin URL
+  git push -u origin master 
+  -->
+  <body class="h-screen bg-[url('/img/image.png')] bg-center bg-cover bg-no-repeat">
+    <div>
+      <div class="h-[10rem] flex justify-between items-center px-[3rem]">
+        <div class="flex space-x-5">
+          <div class="text-[3rem]">
+            <h1>LUNOR</h1>
+          </div>
+          <div class="hidden md:flex items-center space-x-5 text-[1.2rem] xl:text-[1.5rem]">
+            <div>
+              <a href="">Home</a>
+            </div>
+            <div>
+              <a href="">About Me</a>
+            </div>
+            <div>
+              <a href="">Portfolio</a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:flex space-x-5 text-[1.2rem] xl:text-[1.5rem]">
+          <div>
+            <a href="">What I Do</a>
+          </div>
+          <div>
+            <a href="">Contact</a>
+          </div>
+        </div>
+        <div class="flex md:hidden text-[1.5rem]">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
